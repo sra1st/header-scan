@@ -1,0 +1,58 @@
+:root {
+  --bg: #14171c;
+  --bg-raised: #191d24;
+  --line: #2a2f38;
+  --text: #e9eaec;
+  --text-dim: #9ca3af;
+  --text-faint: #6b7280;
+
+  --pass: #4fae9b;
+  --pass-dim: #2c4a44;
+  --warn: #e0a339;
+  --warn-dim: #4a3b1f;
+  --fail: #db5a4b;
+  --fail-dim: #4a2b26;
+
+  --font-sans: "IBM Plex Sans", -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--pass-dim);
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

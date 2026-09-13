@@ -172,31 +172,12 @@ export default function Home() {
       }}
     >
       <header style={{ marginBottom: 40 }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            marginBottom: 10,
-          }}
-        >
+        <div style={{ marginBottom: 18 }}>
           <img
-            src="/logo-icon.png"
-            alt=""
-            width={18}
-            height={18}
-            style={{ opacity: 0.85 }}
+            src="/logo-full.png"
+            alt="header-scan"
+            style={{ height: 26, width: "auto", display: "block", opacity: 0.92 }}
           />
-          <span
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: 12.5,
-              color: "var(--text-faint)",
-              letterSpacing: "0.03em",
-            }}
-          >
-            header-scan
-          </span>
         </div>
         <h1
           style={{

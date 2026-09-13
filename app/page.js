@@ -152,27 +152,51 @@ export default function Home() {
   }
 
   const passCount = result ? result.checks.filter((c) => c.pass).length : 0;
+  const hasOutput = Boolean(result || error || loading);
 
   return (
-    <main
+    <div
       style={{
         minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: hasOutput ? "flex-start" : "center",
+        padding: hasOutput ? "64px 24px 96px" : "24px",
+      }}
+    >
+    <main
+      style={{
+        width: "100%",
         maxWidth: 720,
-        margin: "0 auto",
-        padding: "64px 24px 96px",
       }}
     >
       <header style={{ marginBottom: 40 }}>
         <div
           style={{
-            fontFamily: "var(--font-mono)",
-            fontSize: 12.5,
-            color: "var(--text-faint)",
-            letterSpacing: "0.03em",
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
             marginBottom: 10,
           }}
         >
-          header-scan
+          <img
+            src="/logo-icon.png"
+            alt=""
+            width={18}
+            height={18}
+            style={{ opacity: 0.85 }}
+          />
+          <span
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: 12.5,
+              color: "var(--text-faint)",
+              letterSpacing: "0.03em",
+            }}
+          >
+            header-scan
+          </span>
         </div>
         <h1
           style={{
@@ -295,5 +319,6 @@ export default function Home() {
         here doesn't mean a site is otherwise secure.
       </footer>
     </main>
+    </div>
   );
 }
